@@ -62,9 +62,11 @@ pip install dash plotly pandas numpy
    - Line chart showing population trends by order
 
 ### Interactive Features:
+- **Dark/Light Mode Toggle**: Click the moon/sun button in the top-right corner to switch themes
 - Toggle between pie chart and line chart for population data
 - Hover over charts to see detailed information
 - Responsive design that works on different screen sizes
+- Smooth transitions between theme changes
 
 ## Troubleshooting
 
@@ -100,6 +102,24 @@ If your CSV has different column names, modify the column references in the code
 
 ### Adjust Chart Heights:
 - Change the `height=400` parameter in the `update_layout()` calls
+
+### Customize Theme Colors:
+You can modify the theme colors by changing the `LIGHT_THEME` and `DARK_THEME` dictionaries:
+```python
+LIGHT_THEME = {
+    'backgroundColor': '#FFFFFF',    # Main background
+    'color': '#000000',             # Text color
+    'cardBackground': '#F8F9FA',    # Chart backgrounds
+    'borderColor': '#E9ECEF'        # Border colors
+}
+
+DARK_THEME = {
+    'backgroundColor': '#1E1E1E',    # Main background
+    'color': '#FFFFFF',             # Text color
+    'cardBackground': '#2D2D2D',    # Chart backgrounds
+    'borderColor': '#404040'        # Border colors
+}
+```
 
 ### Add More Chart Types:
 - The population chart already demonstrates how to switch between chart types
